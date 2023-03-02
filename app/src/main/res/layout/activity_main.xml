@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/zodiac_portrait"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/backgroundImageView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:contentDescription="@string/background_description"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:scrollbars="vertical"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/zodiac_portrait" />-->
+
+    <TextView
+        android:id="@+id/promptTextView"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="60dp"
+        android:gravity="center"
+        android:text="@string/prompt_text"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="60dp"
+        android:layout_below="@+id/promptTextView"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/promptTextView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="179dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/spinner"
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="120dp"
+        android:background="#FF9800"
+        android:onClick=""
+        android:text="@string/submit_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="309dp"
+        android:layout_height="417dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/button"
+        android:foregroundGravity="fill_horizontal"
+        android:justificationMode="inter_word"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+</RelativeLayout>
